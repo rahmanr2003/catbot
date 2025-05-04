@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot Berpikir Komputasional</title>
+</head>
+<body>
+
+<script>
+  // Objek berisi pertanyaan dan jawaban chatbot
+  const responses = {
+    "apa itu berpikir komputasional": "Berpikir komputasional adalah proses pemecahan masalah yang melibatkan teknik pemrograman dan konsep komputasi.",
+    "apa saja aspek berpikir komputasional": "Aspek berpikir komputasional meliputi dekomposisi, pengenalan pola, abstraksi, dan algoritma.",
+    "apa itu dekomposisi": "Dekomposisi adalah proses memecah masalah kompleks menjadi bagian-bagian yang lebih kecil dan lebih mudah dikelola.",
+    "apa itu pengenalan pola": "Pengenalan pola adalah kemampuan untuk mengenali kesamaan atau keteraturan dalam suatu permasalahan.",
+    "apa itu abstraksi": "Abstraksi adalah proses menyaring informasi yang tidak relevan untuk fokus pada aspek penting dari suatu permasalahan.",
+    "apa itu algoritma": "Algoritma adalah serangkaian langkah-langkah atau instruksi yang digunakan untuk menyelesaikan suatu masalah.",
+    "contoh algoritma dalam kehidupan sehari-hari": "Contoh algoritma dalam kehidupan sehari-hari adalah resep memasak, petunjuk penggunaan, atau cara menyusun rencana perjalanan.",
+    "mengapa berpikir komputasional penting": "Berpikir komputasional penting karena membantu kita menyelesaikan masalah dengan cara yang sistematis, efisien, dan dapat diterapkan di berbagai bidang.",
+    "bagaimana berpikir komputasional diterapkan dalam pemrograman": "Dalam pemrograman, berpikir komputasional diterapkan dalam merancang algoritma, menyusun kode, dan menyelesaikan masalah dengan pendekatan logis.",
+    "bagaimana cara mengembangkan keterampilan berpikir komputasional": "Keterampilan berpikir komputasional dapat dikembangkan dengan latihan pemecahan masalah, belajar pemrograman, serta melakukan analisis dan perancangan algoritma."
+  };
+
+  // Fungsi chatbot dengan perulangan
+  function askChatbot() {
+    while (true) {
+      let question = prompt("Tanyakan sesuatu tentang berpikir komputasional (ketik 'keluar' untuk berhenti):");
+
+      if (!question || question.toLowerCase() === "keluar") {
+        alert("Terima kasih telah menggunakan chatbot.");
+        break;
+      }
+
+      let cleanedQuestion = question.toLowerCase().trim();
+      let answer = responses[cleanedQuestion] || "Maaf, saya tidak memahami pertanyaan Anda. Coba tanyakan yang lain.";
+
+      alert("ChatBot: " + answer);
+    }
+  }
+
+  // Jalankan chatbot otomatis saat halaman dibuka
+  window.onload = askChatbot;
+</script>
+
+</body>
+</html>
